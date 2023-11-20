@@ -77,15 +77,6 @@ get_board_num(void)
 void
 init_hw(void)
 {
-    pinMode(LED_RED, OUTPUT);
-    pinMode(LED_YEL, OUTPUT);
-    pinMode(LED_GRN, OUTPUT);
-    pinMode(LED_INT, OUTPUT);
-
-    digitalWrite(LED_RED,LOW);
-    digitalWrite(LED_YEL,LOW);
-    digitalWrite(LED_GRN,LOW);
-    digitalWrite(LED_INT,LOW);
 
     pinMode(PUSH, INPUT_PULLUP);
     pinMode(IB0,INPUT_PULLUP);

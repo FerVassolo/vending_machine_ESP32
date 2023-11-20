@@ -18,19 +18,20 @@ setup(void)
 {
     Serial.begin(BAUD);
 
-    connect_wifi();
+    //connect_wifi();
 
     init_hw();
     board = get_board_num();
     printf("Board = %d\n", board);
-    init_mqtt(board);
-    TelnetStream.begin();
+    //init_mqtt(board);
+    //TelnetStream.begin();
 }
 
 void
 loop(void)
 {
-    if( verify_hw() == BUTTON )             //  Verify all input hardware
+    if( verify_hw() == BUTTON ){             //  Verify all input hardware
         do_publish("button","button");
+        }
     test_mqtt();                            //  Test news from broker
 }
